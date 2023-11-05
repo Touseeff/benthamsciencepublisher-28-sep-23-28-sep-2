@@ -1,0 +1,10 @@
+<?php
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+    if($_SESSION['admin']){
+        unset($_SESSION['admin']);
+		header('Location:../index.php');
+    }
+?>
